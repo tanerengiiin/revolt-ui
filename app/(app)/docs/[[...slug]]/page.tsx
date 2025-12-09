@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { mdxComponents } from "@/mdx-components";
-import fm from "front-matter";
 import { findNeighbour } from "fumadocs-core/page-tree";
-import z from "zod";
 import { source } from "@/lib/source";
-import { loader } from "fumadocs-core/source";
-import { ArrowDown, ArrowUpRight, ChevronDown, Copy } from "lucide-react";
+import {  ArrowUpRight, ChevronDown, Copy } from "lucide-react";
 
 export const revalidate = false;
 export const dynamic = "force-static";
@@ -59,7 +56,6 @@ export async function generateMetadata(props: {
           )}&description=${encodeURIComponent(doc.description)}`,
         },
       ],
-      creator: "@shadcn",
     },
   };
 }
@@ -79,7 +75,6 @@ export default async function DocPage(props: {
   const neighbours = findNeighbour(source.pageTree, page.url);
   const links = doc.links;
 
-  console.log(neighbours);
   return (
     <div className="flex items-stretch w-full gap-x-4">
       <div className="flex min-w-0 flex-1 flex-col max-w-xl mx-auto ">
