@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Space_Mono } from "next/font/google";
+import { Geist, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local'
 import { ThemeProvider } from "@/components/theme-provider";
@@ -9,17 +9,11 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Space_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   weight: "400",
   subsets: ["latin"],
 });
-
-
-const commitMono = localFont({
-  src: './fonts/CommitMono-400-Regular.otf',
-  variable: '--font-commit-mono',
-})
 
 export const metadata: Metadata = {
   title: "Revolt",
@@ -34,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${commitMono.variable} font-sans bg-background text-surface-700 dark:text-surface-100 antialiased`}
+        className={`${geistSans.variable} ${robotoMono.variable} font-sans bg-background text-surface-700 dark:text-surface-100 antialiased`}
       >
         <ThemeProvider>{children}</ThemeProvider>
       </body>

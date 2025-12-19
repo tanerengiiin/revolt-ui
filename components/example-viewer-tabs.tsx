@@ -20,13 +20,13 @@ export default function ExampleViewerTabs({
   return (
     <div
       className={cn(
-        "mt-10 overflow-hidden rounded-xl bg-surface-50/25 dark:bg-surface-950/25 border border-surface-200 dark:border-surface-800/75",
+        "mt-10 overflow-hidden rounded-lg bg-surface-50/25 dark:bg-surface-950/25 border border-surface-200 dark:border-surface-800/75",
         className
       )}
       {...props}
     >
-      <div className="bg-surface-100/50 dark:bg-surface-900/75 p-2 border-b border-surface-200 dark:border-surface-800/75 flex items-center">
-        <div className="h-9 flex gap-0.5 border border-surface-200 dark:border-surface-800 p-0.5 rounded-lg bg-surface-0 dark:bg-surface-950/25">
+      <div className="bg-surface-100/50 dark:bg-surface-900/75 p-1 border-b border-surface-200 dark:border-surface-800/75 flex items-center">
+        <div className="h-9 flex gap-0.5 p-0.5 rounded-lg ">
           {(["preview", "code"] as TabSwitcher[]).map((tab) => (
             <button
               key={tab}
@@ -52,8 +52,8 @@ export default function ExampleViewerTabs({
           ))}
         </div>
         <div className="flex-1 ml-auto flex items-center justify-end">
-          <button className="size-9 rounded-lg flex items-center justify-center border border-surface-200 dark:border-surface-800 bg-surface-0 dark:bg-surface-950/25 transition-colors duration-150">
-            <Copy className="size-4 stroke-2" />
+          <button className="size-9 rounded-lg flex items-center justify-center transition-colors duration-150">
+            <Copy className="size-4" />
           </button>
         </div>
       </div>

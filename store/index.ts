@@ -10,5 +10,15 @@ export const Store: Record<string, Record<string, any>> = {
     component: React.lazy(() =>
       import("../store/examples/accordion-demo").then(mod => ({ default: mod.default }))
     ),
+  },
+  "button-demo": {
+    component: React.lazy(() =>
+      import("../store/examples/button-demo").then(mod => ({ default: mod.default }))
+    ),
+  },
+  "button-size-demo": {
+    component: React.lazy(() =>
+      import("../store/examples/button-size-demo").then(mod => ({ default: mod.default }))
+    ),
   }
 };

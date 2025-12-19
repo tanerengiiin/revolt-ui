@@ -36,7 +36,7 @@
   --color-surface-950: var(--surface-950);
 
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-commit-mono);
+  --font-mono: var(--font-roboto-mono);
 
   --color-selection: var(--selection);
   --color-selection-foreground: var(--selection-foreground);
@@ -158,7 +158,7 @@
     border-width: 0px;
     border-color: var(--border);
     overflow: hidden;
-    font-size: 15px;
+    font-size: 14px;
     outline: none;
     position: relative;
     font-family: var(--font-mono) !important;
@@ -166,6 +166,7 @@
     &:has([data-rehype-pretty-code-title]) [data-slot="copy-button"] {
       top: calc(var(--spacing) * 1.5) !important;
     }
+
   }
 
   [data-rehype-pretty-code-title] {
